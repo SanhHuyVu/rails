@@ -1,0 +1,32 @@
+<%= form_with(model: hangsx) do |form| %>
+  <% if hangsx.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hangsx.errors.count, "error") %> prohibited this hangsx from being saved:</h2>
+
+      <ul>
+        <% hangsx.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idnhasanxuat %>
+    <%= form.number_field :idnhasanxuat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tenhang %>
+    <%= form.text_field :tenhang %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quocgia %>
+    <%= form.text_area :quocgia %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

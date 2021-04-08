@@ -1,0 +1,2 @@
+module HangsxesHelper
+end

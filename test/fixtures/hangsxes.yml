@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idnhasanxuat: 1
+  tenhang: MyString
+  quocgia: MyText
+
+two:
+  idnhasanxuat: 1
+  tenhang: MyString
+  quocgia: MyText

@@ -1,0 +1,2 @@
+class Nhacungcap < ApplicationRecord
+end

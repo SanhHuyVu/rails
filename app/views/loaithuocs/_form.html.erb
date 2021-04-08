@@ -1,0 +1,32 @@
+<%= form_with(model: loaithuoc) do |form| %>
+  <% if loaithuoc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(loaithuoc.errors.count, "error") %> prohibited this loaithuoc from being saved:</h2>
+
+      <ul>
+        <% loaithuoc.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idloai %>
+    <%= form.number_field :idloai %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tenloai %>
+    <%= form.text_field :tenloai %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ghichu %>
+    <%= form.text_area :ghichu %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

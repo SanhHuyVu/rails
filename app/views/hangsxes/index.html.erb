@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hangsxes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idnhasanxuat</th>
+      <th>Tenhang</th>
+      <th>Quocgia</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hangsxes.each do |hangsx| %>
+      <tr>
+        <td><%= hangsx.idnhasanxuat %></td>
+        <td><%= hangsx.tenhang %></td>
+        <td><%= hangsx.quocgia %></td>
+        <td><%= link_to 'Show', hangsx %></td>
+        <td><%= link_to 'Edit', edit_hangsx_path(hangsx) %></td>
+        <td><%= link_to 'Destroy', hangsx, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hangsx', new_hangsx_path %>

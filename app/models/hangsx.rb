@@ -1,0 +1,2 @@
+class Hangsx < ApplicationRecord
+end

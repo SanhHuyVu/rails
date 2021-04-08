@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Loaithuocs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idloai</th>
+      <th>Tenloai</th>
+      <th>Ghichu</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @loaithuocs.each do |loaithuoc| %>
+      <tr>
+        <td><%= loaithuoc.idloai %></td>
+        <td><%= loaithuoc.tenloai %></td>
+        <td><%= loaithuoc.ghichu %></td>
+        <td><%= link_to 'Show', loaithuoc %></td>
+        <td><%= link_to 'Edit', edit_loaithuoc_path(loaithuoc) %></td>
+        <td><%= link_to 'Destroy', loaithuoc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Loaithuoc', new_loaithuoc_path %>
